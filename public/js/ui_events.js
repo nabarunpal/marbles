@@ -262,7 +262,7 @@ $(document).on('ready', function () {
 		$('.auditingMarble').removeClass('auditingMarble');												//reset
 		for (var x in pendingTxDrawing) clearTimeout(pendingTxDrawing[x]);
 		setTimeout(function () {
-			$('.txHistoryWrap').html('<div class="auditHint">Click a Marble to Audit Its Transactions</div>');//clear
+			$('.txHistoryWrap').html('<div class="auditHint">Click an Asset to Audit Its Transactions</div>');//clear
 		}, 750);
 		$('#marbleId').html('-');
 		auditingMarble = null;

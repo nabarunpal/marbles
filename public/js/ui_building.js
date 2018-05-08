@@ -197,9 +197,14 @@ function build_a_tx(data, pos) {
 	var company = '-';
 	var id = '-';
 	if (data && data.value && data.value.owner && data.value.owner.username) {
-		username = data.value.owner.username;
-		company = data.value.owner.company;
+		username = data.value.owner.username.toUpperCase();
+
 		id = data.value.owner.id;
+
+        if(id === 'o01525816082870pbP15')
+            company = 'USAA';
+        else
+            compay = 'Non-USAA';
 	}
 
 	html += `<div class="txDetails">
