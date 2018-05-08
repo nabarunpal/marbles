@@ -204,7 +204,7 @@ function build_a_tx(data, pos) {
         if(id === 'o01525816082870pbP15')
             company = 'USAA';
         else
-            compay = 'Non-USAA';
+            company = 'Non-USAA';
 	}
 
 	html += `<div class="txDetails">
