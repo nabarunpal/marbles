@@ -197,14 +197,17 @@ function build_a_tx(data, pos) {
 	var company = '-';
 	var id = '-';
 	if (data && data.value && data.value.owner && data.value.owner.username) {
+
 		username = data.value.owner.username.toUpperCase();
 
 		id = data.value.owner.id;
 
-        if(id === 'o01525816082870pbP15')
-            company = 'USAA';
-        else
-            company = 'Non-USAA';
+        if(id === 'o01525884625671ztmP7')
+            company = 'Stock/Equity';
+        else if(id === 'o01525884625692MeY3p')
+            company = 'Mutual Fund';
+        else if(id === 'o01525884625710UEH0Q')
+        	company = 'Bond';
 	}
 
 	html += `<div class="txDetails">
@@ -218,11 +221,11 @@ function build_a_tx(data, pos) {
 					<div class="marbleName">` + username + `</div>
 				</p>
 				<p>
-					<div class="marbleLegend">Company: </div>
+					<div class="marbleLegend">Asset Type: </div>
 					<div class="marbleName">` + company + `</div>
 				</p>
 				<p>
-					<div class="marbleLegend">Ower Id: </div>
+					<div class="marbleLegend">Owner Id: </div>
 					<div class="marbleName">` + id + `</div>
 				</p>
 			</div>`;
