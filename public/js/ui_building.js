@@ -92,7 +92,7 @@ function build_user_panels(data) {
 		html += `<div id="user` + i + `wrap" username="` + data[i].username.toUpperCase() + `" company="` + data[i].company +
 			`" owner_id="` + data[i].id + `" class="marblesWrap ` + colorClass + `">
 					<div class="legend" style="` + size_user_name(data[i].username) + `">
-						` + toTitleCase(data[i].username) + `
+						` + data[i].username.toUpperCase() + `
 						<span class="fa fa-thumb-tack marblesFix" title="Never Hide Owner"></span>
 						` + disableHtml + `
 					</div>
