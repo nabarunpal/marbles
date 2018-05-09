@@ -89,7 +89,7 @@ function build_user_panels(data) {
 			disableHtml = '<span class="fa fa-trash disableOwner" title="Disable Owner"></span>';
 		}
 
-		html += `<div id="user` + i + `wrap" username="` + data[i].username + `" company="` + data[i].company +
+		html += `<div id="user` + i + `wrap" username="` + data[i].username.toUpperCase() + `" company="` + data[i].company +
 			`" owner_id="` + data[i].id + `" class="marblesWrap ` + colorClass + `">
 					<div class="legend" style="` + size_user_name(data[i].username) + `">
 						` + toTitleCase(data[i].username) + `
