@@ -53,7 +53,7 @@ module.exports = function (logger, cp) {
 		//if (!req.session.user || !req.session.user.username) {		// no session? send them to login
 		//	res.redirect('/login');
 		//} else {
-		res.render('marbles', { title: 'Marbles - Home', bag: build_bag(req) });
+		res.render('marbles', { title: 'TOA - Home', bag: build_bag(req) });
 		//}
 	}
 
